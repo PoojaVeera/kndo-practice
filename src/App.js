@@ -1,28 +1,32 @@
-import React from 'react';
-import { Button } from '@progress/kendo-react-buttons';
-import kendoka from './kendoka.svg';
-import './App.scss';
-
+import React from "react";
+// import { Grid, GridColumn } from "@progress/kendo-react-grid";
+import { Button } from "@progress/kendo-react-buttons";
+import { Link, Route, Routes } from "react-router-dom";
+import { Page1 } from "./components/Page1";
+import { Page2 } from "./components/Page2";
 function App() {
-  const handleClick = React.useCallback(() => {
-    window.open('https://www.telerik.com/kendo-react-ui/components/', '_blank');
-  }, []);
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={kendoka} className="App-logo" alt="kendoka" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+      <h1>Hello KendoReact!</h1>
+      <Link to="/Page1" style={{ textDecoration: "none" }}>
         <Button
-          themeColor={'primary'}
-          size={"large"}
-          onClick={handleClick}
+          themeColor={"error"}
+          icon="folder"
+          disabled={false}
+          fillMode={"outline"}
         >
-          Learn KendoReact
+          click me{" "}
         </Button>
-      </header>
+      </Link>
+      <Link to="/Page2" style={{ textDecoration: "none" }}>
+        <Button themeColor={"success"} icon="star">
+          Page2
+        </Button>
+      </Link>
+      <Routes>
+        <Route path="Page1" element={<Page1 />} />
+        <Route path="Page2" element={<Page2 />} />
+      </Routes>
     </div>
   );
 }
