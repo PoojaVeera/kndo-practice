@@ -1,12 +1,12 @@
 import React from "react";
 import { Calendar } from "@progress/kendo-react-dateinputs";
-
+import "../App.scss";
 import { DropDownList } from "@progress/kendo-react-dropdowns";
 export const Page1 = () => {
   return (
-    <div>
+    <div className="Page1">
       Page1
-      <Calender />
+      <Calendar />
       <DropDownList
         data={["abc", "xyz", "abc"]}
         defaultValue="pqr"

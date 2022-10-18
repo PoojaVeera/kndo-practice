@@ -1,5 +1,5 @@
 import React from "react";
-// import { Grid, GridColumn } from "@progress/kendo-react-grid";
+import "./App.scss";
 import { Button } from "@progress/kendo-react-buttons";
 import { Link, Route, Routes } from "react-router-dom";
 import { Page1 } from "./components/Page1";
