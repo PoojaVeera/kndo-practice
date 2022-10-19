@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.scss";
 import { Button } from "@progress/kendo-react-buttons";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Page1 } from "./components/Page1";
 import { Page2 } from "./components/Page2";
 function App() {
@@ -31,7 +31,8 @@ function App() {
 
     <div>
       <Routes>
-        <Route />
+        <Route path="/" element={<Page1 />} />
+        <Route path="/Page2" element={<Page2 />} />
       </Routes>
     </div>
   );
