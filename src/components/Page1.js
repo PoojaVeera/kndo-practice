@@ -23,7 +23,18 @@
 // };
 
 import React from "react";
-
+import { Field, Form, FormElement } from "@progress/kendo-react-form";
 export const Page1 = () => {
-  return <div>Page1</div>;
+  return (
+    <div>
+      Page1
+      <Form
+        render={(formRenderProps) => (
+          <FormElement style={{ maxWidth: 650 }}></FormElement>
+        )}
+      >
+        <Field></Field>
+      </Form>
+    </div>
+  );
 };
