@@ -2,7 +2,7 @@ import React from "react";
 import "./App.scss";
 import { Route, Routes } from "react-router-dom";
 import { Page1 } from "./components/Page1";
-// import { Page2 } from "./components/Page2";
+import { Page2 } from "./components/Page2";
 function App() {
   return (
     // <div className="App">
@@ -30,8 +30,8 @@ function App() {
 
     <div>
       <Routes>
-        <Route path="/" element={<Page1 />} />
-        {/* <Route path="/Page2" element={<Page2 />} /> */}
+        <Route path="/Page1" element={<Page1 />} />
+        <Route path="/" element={<Page2 />} />
       </Routes>
     </div>
   );
