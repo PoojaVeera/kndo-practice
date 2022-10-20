@@ -40,13 +40,33 @@ export const Page2 = () => {
     <div>
       Page2
       <Form
+        sx={{ display: "flex", flexDirection: "column", color: "red" }}
         onSubmit={handleSubmit}
         render={() => (
           <FormElement>
-            <Field label="username" name="username" component={Input} />
-            <Field label="password" name="password" component={Input} />
+            <Field
+              label="username"
+              name="username"
+              component={Input}
+              style={{
+                color: "blue",
+                width: "30%",
+              }}
+            />
 
-            <Button themeColor={"primary"}>Submit</Button>
+            <Field
+              label="password"
+              name="password"
+              component={Input}
+              style={{
+                color: "blue",
+                width: "30%",
+              }}
+            />
+
+            <Button style={{ color: "black", backgroundColor: "pink" }}>
+              Submit
+            </Button>
           </FormElement>
         )}
       ></Form>
