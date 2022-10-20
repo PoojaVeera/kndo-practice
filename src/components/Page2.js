@@ -27,8 +27,29 @@
 //     </div>
 //   );
 // };
+import { Field, Form, FormElement } from "@progress/kendo-react-form";
 import React from "react";
+import { Input } from "@progress/kendo-react-inputs";
+import { Button } from "@progress/kendo-react-buttons";
 
 export const Page2 = () => {
-  return <div>Page2</div>;
+  const handleSubmit = () => {
+    alert("submitted");
+  };
+  return (
+    <div>
+      Page2
+      <Form
+        onSubmit={handleSubmit}
+        render={() => (
+          <FormElement>
+            <Field label="username" name="username" component={Input} />
+            <Field label="password" name="password" component={Input} />
+
+            <Button themeColor={"primary"}>Submit</Button>
+          </FormElement>
+        )}
+      ></Form>
+    </div>
+  );
 };
