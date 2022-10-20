@@ -40,17 +40,17 @@ export const Page2 = () => {
     <div>
       Page2
       <Form
-        sx={{ display: "flex", flexDirection: "column", color: "red" }}
         onSubmit={handleSubmit}
         render={() => (
-          <FormElement>
+          <FormElement
+            style={{ display: "flex", flexDirection: "column", width: "30%" }}
+          >
             <Field
               label="username"
               name="username"
               component={Input}
               style={{
                 color: "blue",
-                width: "30%",
               }}
             />
 
@@ -60,7 +60,6 @@ export const Page2 = () => {
               component={Input}
               style={{
                 color: "blue",
-                width: "30%",
               }}
             />
 
