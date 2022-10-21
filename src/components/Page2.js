@@ -31,44 +31,81 @@ import { Field, Form, FormElement } from "@progress/kendo-react-form";
 import React from "react";
 import { Input } from "@progress/kendo-react-inputs";
 import { Button } from "@progress/kendo-react-buttons";
+import { Card, CardHeader } from "@progress/kendo-react-layout";
 
 export const Page2 = () => {
-  const handleSubmit = () => {
+  const handleValidate = (value: string) => {
+    return value ? "" : "data required";
+  };
+  const handleSubmit = (data) => {
+    alert(JSON.stringify(data));
     alert("submitted");
   };
   return (
     <div>
-      Page2
-      <Form
-        onSubmit={handleSubmit}
-        render={() => (
-          <FormElement
-            style={{ display: "flex", flexDirection: "column", width: "30%" }}
+      <center>
+        Page2
+        <Card
+          style={{
+            width: 250,
+            boxShadow: "0 0 4px 0 rgba(0, 0, 0, .1)",
+            marginTop: "15px",
+            height: "300px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <CardHeader
+            style={{
+              background: "transparent",
+            }}
           >
-            <Field
-              label="username"
-              name="username"
-              component={Input}
-              style={{
-                color: "blue",
-              }}
-            />
+            login
+          </CardHeader>
+          <Form
+            onSubmit={handleSubmit}
+            render={() => (
+              <FormElement
+                style={{
+                  width: "80%",
+                  margin: "10px",
+                }}
+              >
+                <Field
+                  label="username"
+                  name="username"
+                  component={Input}
+                  validator={handleValidate}
+                  style={{
+                    color: "blue",
+                  }}
+                />
 
-            <Field
-              label="password"
-              name="password"
-              component={Input}
-              style={{
-                color: "blue",
-              }}
-            />
+                <Field
+                  label="password"
+                  name="password"
+                  component={Input}
+                  validator={handleValidate}
+                  style={{
+                    color: "blue",
+                  }}
+                />
 
-            <Button style={{ color: "black", backgroundColor: "pink" }}>
-              Submit
-            </Button>
-          </FormElement>
-        )}
-      ></Form>
+                <Button
+                  style={{
+                    color: "black",
+                    backgroundColor: "pink",
+                    margin: "10px",
+                  }}
+                >
+                  Submit
+                </Button>
+              </FormElement>
+            )}
+          ></Form>
+        </Card>
+      </center>
     </div>
   );
 };
