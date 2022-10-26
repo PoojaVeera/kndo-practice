@@ -38,6 +38,7 @@ export const Page2 = () => {
     return value ? "" : "data required";
   };
   const handleSubmit = (data) => {
+    // e.preventDefault();
     alert(JSON.stringify(data));
     alert("submitted");
   };
@@ -50,15 +51,17 @@ export const Page2 = () => {
             width: 250,
             boxShadow: "0 0 4px 0 rgba(0, 0, 0, .1)",
             marginTop: "15px",
-            height: "300px",
+            height: 250,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            backgroundColor: "#B4E1FF",
+            color: "#800000",
           }}
         >
           <CardHeader
             style={{
-              background: "transparent",
+              color: "black",
             }}
           >
             login
@@ -70,31 +73,28 @@ export const Page2 = () => {
                 style={{
                   width: "80%",
                   margin: "10px",
+                  color: "#800000",
+                  backgroundColor: "#C1FF9B",
                 }}
               >
                 <Field
                   label="username"
                   name="username"
+                  style={{ color: "#AB87FF" }}
                   component={Input}
                   validator={handleValidate}
-                  style={{
-                    color: "blue",
-                  }}
                 />
 
                 <Field
                   label="password"
                   name="password"
+                  style={{ color: "#AB87FF" }}
                   component={Input}
                   validator={handleValidate}
-                  style={{
-                    color: "blue",
-                  }}
                 />
 
                 <Button
                   style={{
-                    color: "black",
                     backgroundColor: "pink",
                     margin: "10px",
                   }}

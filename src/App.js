@@ -3,6 +3,8 @@ import "./App.scss";
 import { Route, Routes } from "react-router-dom";
 import { Page1 } from "./components/Page1";
 import { Page2 } from "./components/Page2";
+import { Layout } from "./components/Layout";
+import { BottomNav } from "./components/BottomNav";
 function App() {
   return (
     // <div className="App">
@@ -29,9 +31,11 @@ function App() {
     // </div>
 
     <div>
+      <Layout />
       <Routes>
         <Route path="/Page1" element={<Page1 />} />
-        <Route path="/" element={<Page2 />} />
+        <Route path="/Page2" element={<Page2 />} />
+        <Route path="/BottomNav" element={<BottomNav />} />
       </Routes>
     </div>
   );
