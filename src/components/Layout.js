@@ -15,6 +15,8 @@ export const Layout = () => {
           <Link to="Page2">Page2</Link>
           <AppBarSpacer style={{ width: 8 }} />
           <Link to="BottomNav">BottomNav</Link>
+          <AppBarSpacer style={{ width: 8 }} />
+          <Link to="FormSwitch">From components</Link>
         </AppBarSection>
       </AppBar>
     </div>

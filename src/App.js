@@ -6,6 +6,12 @@ import { Page2 } from "./components/Page2";
 import { Layout } from "./components/Layout";
 import { BottomNav } from "./components/BottomNav";
 import { Dashboard } from "./components/Dashboard";
+import {
+  FormAutoComplete,
+  FormCheckbox,
+  FormSwitch,
+  FormRadioGroup,
+} from "./components/form-components";
 function App() {
   return (
     // <div className="App">
@@ -38,6 +44,18 @@ function App() {
         <Route path="/" element={<Page2 />} />
         <Route path="/BottomNav" element={<BottomNav />} />
         <Route path="/Dashboard" element={<Dashboard />} />
+        <Route
+          path="/FormSwitch"
+          element={
+            <>
+              <FormSwitch />
+              <FormAutoComplete />
+              <FormCheckbox />
+              <FormRadioGroup />
+            </>
+          }
+        />
+        \
       </Routes>
     </div>
   );
