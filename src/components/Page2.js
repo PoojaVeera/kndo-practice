@@ -32,15 +32,18 @@ import React from "react";
 import { Input } from "@progress/kendo-react-inputs";
 import { Button } from "@progress/kendo-react-buttons";
 import { Card, CardHeader } from "@progress/kendo-react-layout";
+import { useNavigate } from "react-router-dom";
 
 export const Page2 = () => {
+  const navigate = useNavigate();
   const handleValidate = (value: string) => {
     return value ? "" : "data required";
   };
-  const handleSubmit = (data) => {
+  const handleSubmit = () => {
+    navigate("/Dashboard");
     // e.preventDefault();
-    alert(JSON.stringify(data));
-    alert("submitted");
+    // alert(JSON.stringify(data));
+    // alert("submitted");
   };
   return (
     <div>

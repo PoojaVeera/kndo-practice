@@ -5,6 +5,7 @@ import { Page1 } from "./components/Page1";
 import { Page2 } from "./components/Page2";
 import { Layout } from "./components/Layout";
 import { BottomNav } from "./components/BottomNav";
+import { Dashboard } from "./components/Dashboard";
 function App() {
   return (
     // <div className="App">
@@ -34,8 +35,9 @@ function App() {
       <Layout />
       <Routes>
         <Route path="/Page1" element={<Page1 />} />
-        <Route path="/Page2" element={<Page2 />} />
+        <Route path="/" element={<Page2 />} />
         <Route path="/BottomNav" element={<BottomNav />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
       </Routes>
     </div>
   );
